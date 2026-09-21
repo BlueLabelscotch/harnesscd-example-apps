@@ -1,0 +1,21 @@
+inputSet:
+  identifier: cliissue211inputset
+  name: cli issue 211 input set
+  orgIdentifier: default
+  projectIdentifier: sawkatest1
+  pipeline:
+    identifier: cliissue211e2e
+    stages:
+      - stage:
+          identifier: custom
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: echo
+                    type: ShellScript
+                    spec:
+                      source:
+                        spec:
+                          script: echo "hello from issue 211 e2e test"
