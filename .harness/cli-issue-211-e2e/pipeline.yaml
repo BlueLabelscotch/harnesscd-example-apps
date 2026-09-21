@@ -1,0 +1,27 @@
+pipeline:
+  identifier: cliissue211e2e
+  name: cli issue 211 e2e
+  projectIdentifier: sawkatest1
+  orgIdentifier: default
+  stages:
+    - stage:
+        identifier: custom
+        name: custom
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  type: ShellScript
+                  timeout: 10m
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+input>
+                    environmentVariables: []
+                    outputVariables: []
